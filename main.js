@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     heroVideo.addEventListener('playing', () => heroVideo.classList.add('is-playing'));
   }
 
-  // Simple tab switcher (used by the CLASS page)
+  // Simple tab switcher (used by the CLASS page and the About page submenu)
   const classTabs = document.querySelectorAll('.class-tab');
   if (classTabs.length) {
     classTabs.forEach(tab => {
@@ -40,6 +40,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+
+    // Sub-nav quick-links that jump to & activate a specific tab (e.g. About page)
+    document.querySelectorAll('[data-tab-link]').forEach(link => {
+      link.addEventListener('click', () => {
+        const target = link.getAttribute('data-tab-link');
+        const tabBtn = document.querySelector('.class-tab[data-tab="' + target + '"]');
+        if (tabBtn) tabBtn.click();
+      });
+    });
+
+    // Deep-link support: about.html#pastor opens straight to that tab
+    const hash = location.hash.replace('#', '');
+    if (hash) {
+      const tabBtn = document.querySelector('.class-tab[data-tab="' + hash + '"]');
+      if (tabBtn) tabBtn.click();
+    }
+  }
+
+  // Video lightbox (used by the Church Center promo thumbnail on the landing page)
+  const videoLightbox = document.getElementById('videoLightbox');
+  const lightboxVideo = document.getElementById('lightboxVideo');
+  const videoTrigger = document.getElementById('videoLightboxTrigger');
+  const videoClose = document.getElementById('videoLightboxClose');
+  if (videoLightbox && lightboxVideo && videoTrigger) {
+    const openLightbox = () => {
+      videoLightbox.classList.add('open');
+      lightboxVideo.play();
+      document.body.style.overflow = 'hidden';
+    };
+    const closeLightbox = () => {
+      videoLightbox.classList.remove('open');
+      lightboxVideo.pause();
+      lightboxVideo.currentTime = 0;
+      document.body.style.overflow = '';
+    };
+    videoTrigger.addEventListener('click', openLightbox);
+    if (videoClose) videoClose.addEventListener('click', closeLightbox);
+    videoLightbox.addEventListener('click', (e) => { if (e.target === videoLightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
   }
 
   const revealEls = document.querySelectorAll('.reveal');

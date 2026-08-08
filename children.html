@@ -48,91 +48,129 @@
 <section style="padding:56px 0 0;">
   <div class="wrap">
     <div class="visit-strip reveal" style="flex-wrap:wrap; gap:14px 28px;">
-      <a href="#nursery" class="vi" style="text-decoration:none;">Nursery</a>
-      <a href="#littlepeoples" class="vi" style="text-decoration:none;">Little People's</a>
-      <a href="#rootedkids" class="vi" style="text-decoration:none;">Rooted Kids</a>
+      <a href="#programs" class="vi" style="text-decoration:none;" data-tab-link="nursery">Nursery</a>
+      <a href="#programs" class="vi" style="text-decoration:none;" data-tab-link="littlepeoples">Little People's</a>
+      <a href="#programs" class="vi" style="text-decoration:none;" data-tab-link="rootedkids">Rooted Kids</a>
       <a href="#fridaynights" class="vi" style="text-decoration:none;">Fun Friday Nights</a>
       <a href="#resources" class="vi" style="text-decoration:none;">At-Home Resources</a>
+      <a href="#trusted-resources" class="vi" style="text-decoration:none;">Trusted Resources</a>
+      <a href="#serve" class="vi" style="text-decoration:none;">Serve</a>
     </div>
   </div>
 </section>
 
-<!-- ================= NURSERY ================= -->
-<section class="program c-teal" id="nursery">
-  <div class="wrap program-grid">
-    <div class="program-copy reveal">
-      <span class="program-tag">Nursery &middot; Ages 0&ndash;2</span>
-      <h3>Nursery</h3>
-      <p>Our nursery is a warm, loving space for our littlest ones. Caring, background-checked volunteers look after your baby or toddler with gentle, attentive care so you can fully enjoy the service.</p>
-      <div class="program-meta">
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sundays, 10:30 AM</div>
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> At the Church</div>
-      </div>
-      <a href="pastoral-care.html" class="btn btn-solid">Get Connected</a>
+<!-- ================= NURSERY / LITTLE PEOPLE'S / ROOTED KIDS (tabs) ================= -->
+<section class="class-tabs" id="programs">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto; margin-right:auto;">
+      <span class="kicker">Sunday Mornings, 10:30 AM</span>
+      <h2>A Place for Every Age</h2>
+      <p>From our smallest nursery babies through Grade 5, every kid has a spot made just for them.</p>
     </div>
-    <div class="program-visual reveal">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-      <small>Photo placeholder — nursery</small>
+    <div class="class-tablist" role="tablist">
+      <button class="class-tab active" data-tab="nursery" role="tab" aria-selected="true"><span class="num">Nursery</span><span class="lbl">Age 0&ndash;2</span></button>
+      <button class="class-tab" data-tab="littlepeoples" role="tab" aria-selected="false"><span class="num">Little People's</span><span class="lbl">Age 3&ndash;5</span></button>
+      <button class="class-tab" data-tab="rootedkids" role="tab" aria-selected="false"><span class="num">Rooted Kids</span><span class="lbl">K&ndash;Grade 5</span></button>
     </div>
-  </div>
-</section>
 
-<!-- ================= LITTLE PEOPLE'S ================= -->
-<section class="program alt reverse c-tealgreen" id="littlepeoples">
-  <div class="wrap program-grid">
-    <div class="program-visual reveal">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
-      <small>Photo placeholder — Little People's</small>
-    </div>
-    <div class="program-copy reveal">
-      <span class="program-tag">Little People's &middot; Ages 2&ndash;5</span>
-      <h3>Little People's at the Church</h3>
-      <p>Little People's is where preschoolers sing, play, and learn about God's love in ways just their size — through stories, songs, and hands-on activities, right here at the church.</p>
-      <div class="program-meta">
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-green)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sundays, 10:30 AM</div>
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-green)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> At the Church</div>
-      </div>
-      <a href="pastoral-care.html" class="btn btn-solid" style="background:var(--teal-green)">Get Connected</a>
-    </div>
-  </div>
-</section>
+    <div class="class-panels">
 
-<!-- ================= ROOTED KIDS ================= -->
-<section class="program c-navy" id="rootedkids">
-  <div class="wrap program-grid">
-    <div class="program-copy reveal">
-      <span class="program-tag">Rooted Kids &middot; Grades 1&ndash;5</span>
-      <h3>Rooted Kids</h3>
-      <p>Rooted Kids meets Sunday mornings at The Reach Centre, where grade school kids dig into the Bible, build real friendships, and discover how God's story becomes their story.</p>
-      <div class="program-meta">
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sundays, 10:30 AM</div>
-        <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> The Reach Centre</div>
+      <!-- NURSERY -->
+      <div class="class-panel active" id="panel-nursery">
+        <div class="program-grid c-teal">
+          <div class="program-copy">
+            <span class="program-tag">People's Nursery &middot; Age 0&ndash;2</span>
+            <h3>People's Nursery</h3>
+            <div class="program-meta">
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sunday Morning</div>
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> People's Church, Room 101&ndash;102</div>
+            </div>
+            <p>People's Nursery is a safe and nurturing environment for infants from Newborn &ndash; Age 2 to be cared for during our Sunday morning service! Our nursery is staffed with loving volunteers who are excited to shower your infants with God's love so that parents can enjoy our Sunday morning service knowing that their kids are in the best hands! The nursery has a crib room that is also outfitted with comfortable chairs for baby feeding, as well as two play rooms for crawlers or walkers!</p>
+            <p>We are always looking for volunteers for each area of childcare, so if you are interested please contact our Children's Pastor, Angela at <a href="mailto:angela.sisco@peopleschurchgp.com" style="color:var(--teal); font-weight:600;">angela.sisco@peopleschurchgp.com</a>!</p>
+            <a href="https://peoples.churchcenter.com/registrations/events/category/20002" target="_blank" rel="noopener" class="btn btn-solid">Go to Kids Event Page</a>
+          </div>
+          <div class="program-visual">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            <small>Photo placeholder — People's Nursery</small>
+          </div>
+        </div>
       </div>
-      <a href="pastoral-care.html" class="btn btn-solid" style="background:var(--navy)">Get Connected</a>
-    </div>
-    <div class="program-visual reveal">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      <small>Photo placeholder — Rooted Kids</small>
+
+      <!-- LITTLE PEOPLE'S -->
+      <div class="class-panel" id="panel-littlepeoples">
+        <div class="program-grid c-tealgreen">
+          <div class="program-copy">
+            <span class="program-tag">Little People's Church &middot; Age 3&ndash;5</span>
+            <h3>Little People's Church</h3>
+            <div class="program-meta">
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-green)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sunday Morning, 10:30&ndash;12:00</div>
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal-green)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> People's Church, Room 103&ndash;104</div>
+            </div>
+            <p>Every Sunday morning, from 10:30&ndash;12:00 we offer a super fun and engaging opportunity for your preschooler to learn about God in a fun, safe and loving environment! Kinder age kids have the option to stay in LPC or move up to Rooted Kids at The Reach for their kindergarten year. This classroom offers a fantastic hands on learning environment for your preschoolers each week!</p>
+            <p>A morning in LPC consists of a centre time, clean up, music time, Bible lesson/story time, snack time and a craft time as well! This classroom experience is an incredible opportunity for your preschooler to learn more about God and His word while engaging with loving volunteers and new friends each week! Please contact our Children's Pastor, Angela if you are interested in serving in this area at <a href="mailto:angela.sisco@peopleschurchgp.com" style="color:var(--teal-green); font-weight:600;">angela.sisco@peopleschurchgp.com</a>!</p>
+            <a href="https://peoples.churchcenter.com/registrations/events/category/20002" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--teal-green)">Go to Kids Event Page</a>
+          </div>
+          <div class="program-visual">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
+            <small>Photo placeholder — Little People's Church</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROOTED KIDS -->
+      <div class="class-panel" id="panel-rootedkids">
+        <div class="program-grid c-navy">
+          <div class="program-copy">
+            <span class="program-tag">Rooted Kids &middot; Kindergarten&ndash;Grade 5</span>
+            <h3>Welcome to Rooted Kids</h3>
+            <div class="program-meta">
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Sunday Morning, 10:30&ndash;12:00</div>
+              <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> The Reach Centre</div>
+            </div>
+            <p>Rooted Kids is our Elementary age ministry! Each Sunday children from Kindergarten &ndash; Grade 5 are invited to join us at The Reach Centre from 10:30&ndash;12:00 for an engaging and exciting church service! We have lots of time to run and play on our fabulous Reach Play Centre and inflatables, followed by a time of worship, an incredible Bible lesson and a delicious snack! We would love to have your kiddo join us!</p>
+            <p>If you have any questions or are interested in serving in Children's, please contact our Children's Pastor, Angela at <a href="mailto:angela.sisco@peopleschurchgp.com" style="color:var(--navy); font-weight:600;">angela.sisco@peopleschurchgp.com</a>.</p>
+            <a href="https://peoples.churchcenter.com/calendar?view=list&amp;category=Children%27s" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--navy)">Go to Kids Event Page</a>
+          </div>
+          <div class="program-visual">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <small>Photo placeholder — Rooted Kids</small>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ================= FUN FRIDAY NIGHTS ================= -->
-<section class="program alt reverse c-sky" id="fridaynights">
+<section class="program reverse c-sky" id="fridaynights">
   <div class="wrap program-grid">
     <div class="program-visual reveal">
       <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>
       <small>Photo placeholder — Fun Friday Nights</small>
     </div>
     <div class="program-copy reveal">
-      <span class="program-tag">Fun Friday Nights &middot; Every Other Week</span>
+      <span class="program-tag">Fun Friday Nights &middot; Grade 1&ndash;5</span>
       <h3>Fun Friday Nights</h3>
-      <p>Every other Friday, kids head to The Reach Centre for an evening packed with fun, friendship, faith, and food — a favorite extra night out for our Rooted Kids crew and their friends.</p>
+      <p>Children from Grade 1&ndash;5 are invited out every second Friday to The Reach Centre for a fuel-burning night of fun, friendship and faith building! Fun Fridays are a drop off program for all kids from Grade 1&ndash;5 to come and play on our incredible play equipment, enjoy a delicious snack, engage in a life changing Bible story and enjoy a themed activity! The cost is $2 and it runs every second Friday throughout the school year!</p>
       <div class="program-meta">
         <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg> Every Other Friday</div>
         <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> The Reach Centre</div>
       </div>
-      <a href="pastoral-care.html" class="btn btn-solid" style="background:var(--sky); color:var(--navy)">Get Connected</a>
+      <a href="https://peoples.churchcenter.com/calendar?view=list&amp;category=Children%27s" target="_blank" rel="noopener" class="btn btn-solid" style="background:var(--sky); color:var(--navy)">Go to Kids Event Page</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVE WITH CHILDREN'S MINISTRY ================= -->
+<section class="programs-intro" id="serve">
+  <div class="wrap">
+    <span class="kicker">Get Involved</span>
+    <h2>Serve in Children's Ministry</h2>
+    <p>From the nursery to Rooted Kids, our classrooms run on volunteers who love showing up for kids every week. No experience needed — just a willing heart. We'd love to have you on the team.</p>
+    <div class="hero-actions" style="justify-content:center; margin-top:26px; margin-bottom:0;">
+      <a href="https://peoples.churchcenter.com/groups/programs-for-the-ages/children-s-ministry" target="_blank" rel="noopener" class="btn btn-primary">See Serving Opportunities</a>
+      <a href="mailto:angela.sisco@peopleschurchgp.com" class="btn btn-outline">Email Angela</a>
     </div>
   </div>
 </section>
@@ -142,7 +180,7 @@
   <div class="wrap">
     <div class="section-head reveal" style="max-width:700px; margin-bottom:44px;">
       <span class="kicker">Keep Learning At Home</span>
-      <h2>Resources for Parents</h2>
+      <h2>Printables for Parents</h2>
       <p>Free printables to help continue the conversation at home — pick them up in the lobby, or download them here soon.</p>
     </div>
     <div class="teaser-grid">
@@ -182,6 +220,44 @@
   </div>
 </section>
 
+<!-- ================= TRUSTED RESOURCE LINKS ================= -->
+<section class="teasers" id="trusted-resources" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto; margin-right:auto; max-width:700px;">
+      <span class="kicker">From Our Children's Pastor</span>
+      <h2>Trusted Resources</h2>
+      <p>Our Children's Pastor, Angela, has compiled some trusted resources for you! We hope you find this helpful.</p>
+    </div>
+    <div class="resource-links">
+      <a class="resource-link reveal" href="https://www.focusonthefamily.com/parenting/sibling-squabbles/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg></span>
+        <span class="txt">A great article on sibling rivalry!</span>
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="resource-link reveal" href="http://saddlebackparents.com/two-minute-tips/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg></span>
+        <span class="txt">2 minute videos covering a variety of topics in parenting!</span>
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="resource-link reveal" href="https://www.focusonthefamily.com/parenting/hope-and-faith-during-single-parent-struggles/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg></span>
+        <span class="txt">Some encouragement for single parents!</span>
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="resource-link reveal" href="http://saddlebackparents.com/the-purpose-of-parenting/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg></span>
+        <span class="txt">I strongly encourage any Christian parent to watch this video which gives you insight into the purpose of parenting!</span>
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="resource-link reveal" href="https://elevatekids.com/parents/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg></span>
+        <span class="txt">A video tool for you to help build biblical leadership principles in your children!</span>
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= BACK TO CARE ================= -->
 <section style="padding:0 0 90px; text-align:center;">
   <div class="wrap">
@@ -206,6 +282,7 @@
           <li><a href="https://peoples.churchcenter.com/people/forms/3387" data-open-in-church-center-modal="true">Prayer</a></li>
           <li><a href="giving.html">Give</a></li>
           <li><a href="events.html">Events</a></li>
+          <li><a href="online-community.html">Online Community</a></li>
         </ul>
       </div>
       <div>

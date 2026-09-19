@@ -58,6 +58,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Peeking horizontal carousel for the Children's Ministry program tabs (#programs).
+  // Panels sit side-by-side; clicking a tab scrolls the strip to that panel,
+  // and the strip is natively swipeable on touch devices.
+  const programsPanels = document.querySelector('#programs .class-panels');
+  if (programsPanels) {
+    const programTabs = document.querySelectorAll('#programs .class-tab');
+    const programPanelEls = programsPanels.querySelectorAll('.class-panel');
+
+    const scrollToProgramPanel = (id) => {
+      const panel = programsPanels.querySelector('#panel-' + id);
+      if (!panel) return;
+      const target = panel.getBoundingClientRect().left - programsPanels.getBoundingClientRect().left + programsPanels.scrollLeft;
+      programsPanels.scrollTo({ left: target, behavior: 'smooth' });
+    };
+    programTabs.forEach(tab => {
+      tab.addEventListener('click', () => scrollToProgramPanel(tab.getAttribute('data-tab')));
+    });
+
+    // Keep the tab highlight in sync when the user swipes/scrolls the strip directly.
+    const activateProgramTab = (id) => {
+      programTabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-tab') === id));
+    };
+    const programsIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && e.intersectionRatio > 0.6) {
+          activateProgramTab(e.target.id.replace('panel-', ''));
+        }
+      });
+    }, { root: programsPanels, threshold: [0.6] });
+    programPanelEls.forEach(p => programsIO.observe(p));
+  }
+
   // Video lightbox (used by the Church Center promo thumbnail on the landing page)
   const videoLightbox = document.getElementById('videoLightbox');
   const lightboxVideo = document.getElementById('lightboxVideo');
